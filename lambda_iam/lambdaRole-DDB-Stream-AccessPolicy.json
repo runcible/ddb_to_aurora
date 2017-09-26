@@ -1,0 +1,42 @@
+{
+    "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": "lambda:InvokeFunction",
+                "Resource": "arn:aws:lambda:us-east-1:341704623426:function:zef-tasks"
+            },
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "dynamodb:DescribeStream",
+                    "dynamodb:GetRecords",
+                    "dynamodb:GetShardIterator",
+                    "dynamodb:ListStreams"
+                ],
+                "Resource": "arn:aws:dynamodb:us-east-1:341704623426:table/*/stream/*"
+            },
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "firehose:DeleteDeliveryStream",
+                    "firehose:PutRecord",
+                    "firehose:PutRecordBatch",
+                    "firehose:UpdateDestination",
+                    "firehose:DescribeDeliveryStream"
+                ],
+                "Resource": [
+                    "arn:aws:firehose:us-east-1:341704623426:deliverystream/*"
+                ]
+            },
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "logs:CreateLogGroup",
+                    "logs:CreateLogStream",
+                    "logs:PutLogEvents"
+                ],
+                "Resource": "*"
+            }
+        ]
+}
