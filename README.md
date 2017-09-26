@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ddbStreamsToAurora
 Source code which enables Data Replication from DynamoDB to Amazon Aurora.This source code is to be used as a reference
 for an AWS Database <a href="https://aws.amazon.com/blogs/database/how-to-stream-data-from-amazon-dynamodb-to-amazon-aurora-using-aws-lambda-and-amazon-kinesis-firehose/">Blog post</a> which shows you how you could implement data replication from dynamodb to Amazon Aurora. It is not production ready.
@@ -10,3 +11,6 @@ The 'TestHarness' folder contains source code of a TestHarness which populates a
 The 'cfTemplates' folder contains source code for all the cloudformation templates used within the blog post.
 
 The 'lambda_iam' folder contains IAM Policies and the source code (Zip files) for all the Lambda functions used in the blog post.
+=======
+# ddb_to_aurora
+>>>>>>> 8972c7f734f9972a79bcaa54c3db89dc2fbd99e7
